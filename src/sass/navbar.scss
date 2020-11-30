@@ -1,52 +1,62 @@
 .navbar {
-    background-color: $orange;
-    line-height: 2;
+  background-color: $orange;
+  line-height: 2;
 
-    
+  &__catalog {
+    background-color: $red;
+    min-width: 243px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
 
-    &__catalog {
-        background-color: $red;
-        min-width: 243px;
-        font-size: 24px;
-        text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: none;
+      list-style: none;
+    }
+
+    button {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__second {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0 24px;
+      a {
         color: #fff;
-        
-        display: flex;
-        align-items: center;
-
-        ul{
-            display: flex;
-        }
-
-
-        button{
-            width: 60px;
-            height: 60px;
-        }
+      }
     }
+  }
 
-    &__second {
-       
-            display: flex;
-            list-style: none;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 
-        
-        li {
-            padding: 0 24px;
-            a {
-                color: #fff;
-            }
-        }
+  &__dropdown {
+    display: flex;
+    flex-direction: column;
+    top: 216px;
+    background-color: red;
+    z-index: 999;
+    position: absolute;
+    width: 243px;
+
+    li {
+      &:hover {
+        background-color: darken($red, 25%);
+      }
     }
-
-   
-    &__wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
+  }
 }
